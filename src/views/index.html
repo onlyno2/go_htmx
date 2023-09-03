@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/stylesheets/output.css">
+  <script src="https://unpkg.com/htmx.org@1.9.5" integrity="sha384-xcuj3WpfgjlKF+FXhSQFQ0ZNr39ln+hwjN3npfM9VBnUskLolQAcN80McRIVOPuO" crossorigin="anonymous"></script>
   <title>TODOS</title>
 </head>
 <body>
@@ -13,6 +14,13 @@
         <div class="flex items-center mb-6">
           <h4 class="font-semibold text-lg">TODOS</h4>
         </div>
+
+        <h5 class="text-base">Outer replacement</h5>
+        <div
+          hx-get="/todos"
+          hx-trigger="click"
+          hx-swap="outerHTML"
+        >Click to load todos</div>
       </div>
     </div>
   </div>
